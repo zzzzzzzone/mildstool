@@ -339,6 +339,7 @@ footer .info ul{
 
 
 
+
 @media (max-width: 993px) {
     .swiper {
         width: 50%;
@@ -361,11 +362,16 @@ footer .info ul{
         text-align: center;
         
     }
+    section{
+        margin-top: 200px;
+    }
     
 
-    .new .n_text p{
+    /* .new .n_text p */
+    
+        p{
         font-size: 14px;
-    }
+        }
 }
 
 
@@ -410,7 +416,9 @@ footer .info ul{
     }
 
 
-
+    section{
+        margin-top: 100px;
+    }
 
     .new .n_img figure{
         width:auto;
@@ -434,7 +442,20 @@ footer .info ul{
         margin-bottom: 5px;
     }
 
-    .new .n_text p{
+    /* .new .n_text p{
         font-size: 12px;
+    } */
+
+    p{
+        font-size: 12px;
+        }
+
+    .product .pro:nth-child(3),
+    .product .pro:nth-child(4),
+    .product .pro:nth-child(5),
+    .product .pro:nth-child(6),
+    .product .pro:nth-child(11),
+    .product .pro:nth-child(12){
+        display: none;
     }
   }
