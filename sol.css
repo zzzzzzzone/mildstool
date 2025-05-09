@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+ul{
+    list-style: none;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #808080;
+}
+
+header a{
+    color: #000;
+}
+
+header .header_i{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .header_i h1{
+    font-size: 1.5rem;
+}
+
+header .header_i nav{
+    height: 50px;
+    
+}
+
+header .header_i nav ul{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 24px;
+}
+
+header .header_i .ham{
+    width: 32px;
+    height: 24px;
+    cursor: pointer;
+}
+
+header .header_i .ham .ham_i{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+header .header_i .ham .ham_i span{
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    border-radius: 4px;
+}
+
+
+.program{
+    margin: 150px 0;
+}
+
+.program .program_i h2{
+    margin-bottom: 80px;
+    font-weight: 900;
+}
+
+.program .program_i .p_box{
+    margin-bottom: 40px;
+}
+
+.program .program_i .p_box .p_thum{
+    width: 100%;
+    height: 320px;
+    background-color: #808080;
+    margin-bottom: 24px;
+}
+
+.program .program_i .p_box .p_text{
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
+}
+
+.program .program_i .p_box .p_text h3{
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.program .program_i .p_box .p_text .name p{
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.program .program_i .p_box .p_text .name span{
+    color: #808080;
+}
+
+.products{
+    margin-bottom: 150px;
+}
+
+.products .products_i h2{
+    margin-bottom: 80px;
+    font-weight: 900;
+}
+
+.products .products_i .pd_box .pd_image{
+    width: 100%;
+    height: 300px;
+    background-color: #333;
+    margin-bottom: 8px;
+}
+
+
+.products .products_i .pd_box .pd_title{
+    margin-bottom: 8px;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+
+footer{
+    width: 100%;
+    height: 400px;
+    background-color: #000;
+}
+
+@media screen and (max-width:575px) {
+    .products [class*="col"]{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .program [class*="col"]{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .products .products_i .pd_box .pd_text{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .products .products_i .pd_box{
+        margin-bottom: 40px;
+    }
+
+    .program .program_i .p_box .p_text{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    
+}
