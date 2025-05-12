@@ -4,12 +4,28 @@ html{
     font-family: "Inter", sans-serif;
     
 }
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
 header{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     /* align-items: center; */
     padding: 40px;
-    z-index: 10;
+    position: absolute;
+    top: 0;
+    z-index: 1;
 }
 
 header li{
@@ -32,17 +48,19 @@ header .bar i{
     font-size: 24px;
 }
 
-main{
+.top_section{
     width: 100%;
-    height: 100vh;
-    position: relative;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-html,
-body {
-  position: relative;
-  height: 100%;
-}
+
 
 
 .swiper {
@@ -81,32 +99,22 @@ body {
 
 }
 
-/* .swiper-button-next{
-    position: absolute;
-    left: 0;
-} */
 
 
 main figure{
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+   position: absolute;
+   
 }
 
 .title_box{
-    width: 100%;
     text-align: center;
     overflow: hidden;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 30px 0;
 }
 
 main h1{
@@ -135,9 +143,10 @@ main .bt{
 
 section{
     margin-top: 300px;
+    overflow: hidden;
 }
 
-.container .top_title{
+.top_title{
     /* font-size: 80px; */
     font-size: clamp(32px, 6vw, 80px);
     font-weight: 900;
@@ -252,23 +261,15 @@ section{
     font-size: 14px;
 }
 
-.product .box{
-    width: 100%;
-    height: 300px;
-    margin-bottom: 24px;
-   
-}
 
-.product .box{
-    position: relative;
-}
-.product .box .title{
-    position: absolute;
-    top: 0px;
-    left: 0px;}
    
 
-
+.product h2{
+        /* font-size: 80px; */
+        font-size: clamp(32px, 6vw, 80px);
+        font-weight: 900;
+        margin-bottom: 30px;
+}
 
 
 
@@ -277,6 +278,7 @@ section{
     grid-template-columns: repeat(4,1fr);
     gap: 24px;
 }
+
 
 .pro2 .pro_t{
     position: relative;
@@ -382,6 +384,10 @@ footer .info ul{
     section{
         margin-top: 200px;
     }
+
+    .container .top_title{
+        margin-bottom: 50px;
+    }
     
     .new .n_text h6{
         font-size: 18px;
@@ -413,32 +419,34 @@ footer .info ul{
 
 
 @media (max-width: 575px) {
-    .swiper {
-        width: 40%;
-        height: 100%;
-        position: relative;
-      }
+
+
     main{
-        position: relative;
+        display: flex;
+        flex-direction: column;
     }
 
-    main figure{
-        position: absolute;
-        top: 0;
+    header{
+        padding: 0;
+        position: static;
+        order: 2;
     }
 
-    main .title_box{
-        position: absolute;
-        top: 20%;
+    .top_section{
+        order: 1;
+        position: static;
+        transform: translate(0,0);
     }
 
-    main header{
-        position: absolute;
-        top: 400px;
+    .top_section figure{
+        overflow: hidden;
+    }
+
+    main header ul{
+        width: 100%;
     }
 
     main header li{
-        margin: 0;
         font-size: 4rem;
         font-weight: 900;
         color: #222222;
@@ -446,19 +454,17 @@ footer .info ul{
     }   
     
     main header .bar{
-
         display: none;
-       
     }
 
-    .section{
-        margin-top: 350px;
-        width:180vw;
-    }
 
     section{
         
-        margin-top: 100px;
+        margin-top: 50px;
+    }
+
+    .container .top_title{
+        margin-bottom: 30px;
     }
 
 
@@ -509,7 +515,14 @@ footer .info ul{
         display: none;
     }
 
+    footer{
+        margin-top: 60px;
+    }
+
     footer .wrap li{
+        font-size: 10px;
+    }
+    footer .info li{
         font-size: 10px;
     }
   }
